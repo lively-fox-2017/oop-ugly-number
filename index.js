@@ -3,7 +3,7 @@
 class UglyNumber {
 
   constructor() {
-    this.uglyNumbers = [];
+
   }
 
   maxDivides(number, divisible) {
@@ -22,28 +22,35 @@ class UglyNumber {
   }
 
   getUglyNo(input) {
-
-    this.uglyNumbers = [];
-
     let i = 1;
     let countUglyNumber = 1; // ugly number count
-
-    // Push 1
-    this.uglyNumbers.push(1);
 
     while(input > countUglyNumber) {
       i++;
       if(this.isUgly(i)) {
         countUglyNumber++;
-        this.uglyNumbers.push(i);
       }
     }
     return i;
   }
 
-  getUglyArray() {
+  getUglyArray(input) {
 
-    return this.uglyNumbers;
+    let i = 1;
+    let countUglyNumber = 1; // ugly number count
+    let uglyNumbersArr = [];
+
+    // Push 1
+    uglyNumbersArr.push(1);
+
+    while(input > countUglyNumber) {
+      i++;
+      if(this.isUgly(i)) {
+        countUglyNumber++;
+        uglyNumbersArr.push(i);
+      }
+    }
+    return uglyNumbersArr;
 
   }
 
@@ -52,4 +59,4 @@ class UglyNumber {
 let generateUgly = new UglyNumber;
 
 console.log(generateUgly.getUglyNo(7));
-console.log(generateUgly.getUglyArray());
+console.log(generateUgly.getUglyArray(7));
