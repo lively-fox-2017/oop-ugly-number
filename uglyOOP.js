@@ -1,7 +1,7 @@
 'use strict'
 class UglyNumber {
     constructor() {
-        this.arrUgly = [1, ]
+        this.arrUgly = []
     }
 
     maxDivides(number, divisible) {
